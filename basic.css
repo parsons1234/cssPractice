@@ -102,6 +102,13 @@ font-family: FAMILY_NAME, GENERIC_NAME;
 
 GENERIC_NAME是其他文字不可使用時的替代字體
 
+像這樣
+
+p {
+  font-family: Helvetica, sans-serif;
+}
+
+要注意的是通用字體（GENERIC_NAME）不分大小寫 也不需要引號 因為他們是css的關鍵字
 
 <style>
   .red-text {
@@ -153,6 +160,10 @@ GENERIC_NAME是其他文字不可使用時的替代字體
   </form>
 </main>
 */
+
+
+/* */
+
 
 
 
