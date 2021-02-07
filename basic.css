@@ -1,0 +1,158 @@
+/* 改變文字的顏色 */
+
+/*
+//下方style＝"color:red;"的部分,這是對單個h2元素進行
+
+<h2 style="color:red;">CatPhotoApp</h2> 
+
+但有更好的方法應用css
+*/
+
+
+/* 
+像這樣,這會讓所有h2元素呈現紅色
+
+使用css選擇器設計樣式
+
+
+<style>
+h2 
+{
+    color: red; 
+}
+
+</style>
+*/
+
+
+
+
+
+/* 使用css 的class 來設計元素樣式 */
+
+/*
+class是可以重複使用的樣式 並且可以添加在html元素中
+
+<h2 class="blue-text">CatPhotoApp</h2> class使用在html中
+
+注意 class 在style中會以.開頭
+<style>
+  .blue-text {
+    color: blue;
+  }
+</style>
+
+*/
+
+
+/* 使用一個css class 對多個元素進行樣式設計*/
+/*
+<style>
+  .red-text {
+    color: red;
+  }
+  
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+</main>
+*/
+
+
+
+
+/*    更改元素字體大小   */
+
+/* 
+將所有 p 元素 字體大小設為16px
+ p{
+    font-size:16px;
+  }
+*/
+
+
+
+/*設定元素的字體*/
+/*
+可以透過 font-family設置元素要使用的字體
+像是
+
+h2 {
+  font-family: sans-serif;  // 讓所有h2元素使用這個字體
+}
+
+*/
+
+/*匯入google字型*/
+
+/*
+https://fonts.google.com 搜尋字型 點進去想要的以後  字型後面會有 select this style 
+
+將該段程式碼連結貼入 html標籤的部分即可
+
+在引用字型的時候記得 如果有有空格必須使用"" 例如 "Open Sans " ,Lobster就不用
+
+＊記得ont-family區分大小寫 
+
+語法如下：
+
+font-family: FAMILY_NAME, GENERIC_NAME;
+
+GENERIC_NAME是其他文字不可使用時的替代字體
+
+
+<style>
+  .red-text {
+    color: red;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+  h2{
+    font-family:Lobster;
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com"> //**********這行跟下面那行從google font複製的
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+
+
+<h2 class="red-text">CatPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <div>
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+*/
+
+
+
