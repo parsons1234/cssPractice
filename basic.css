@@ -94,7 +94,7 @@ https://fonts.google.com 搜尋字型 點進去想要的以後  字型後面會�
 
 在引用字型的時候記得 如果有有空格必須使用"" 例如 "Open Sans " ,Lobster就不用
 
-＊記得ont-family區分大小寫 
+＊記得font-family區分大小寫 
 
 語法如下：
 
@@ -162,8 +162,554 @@ p {
 */
 
 
-/* */
+/* 調整圖片 */
+
+/* 假設我們想讓class larger-image 的寬度為500px 
+
+<style>
+
+  .larger-image {
+    width: 500px;
+  }
+</style>
+
+*/
+
+
+/* 在元素周圍通過邊框 */
+/* css border 有樣式、顏色、寬度等屬性 */
+/*
+創建一個 紅色 寬度5像素的邊框
+<style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+
+*/
+
+/* ********************** 記得 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+
+/*
+
+可以在一個元素上使用多個class 用空格分開class名稱 
+
+如下
+
+<img class="class1 class2">
+
+*/
 
 
 
 
+/* 增加邊框半徑的圓角 */
+/*
+
+.thick-green-border
+ {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius:10px; //可以用border-radius 
+  }
+*/
+
+
+
+
+/*除了px 還可以使用百分比來指定邊界半徑*/
+/* border-radius:50%; */
+
+
+
+
+
+/* 給予div 元素 背景色 */
+
+/*
+
+ .silver-background
+  {
+    background-color:silver;
+  }
+
+*/
+
+
+
+
+
+
+/*  設定元素id  */
+
+/*
+--------------------------------------觀念----------------------------------------------------
+使用id有幾個好處 可以通過id改變單個元素的樣式 在JS中可以透過id選擇和操作物件
+
+記得 id是唯一的 雖然瀏覽器不強迫執行此規範 但這是被廣泛認可的，所以不要給多個元素設相同的id屬性
+
+
+語法如下：
+
+<h2 id="cat-photo-app">
+
+
+
+*/
+
+
+
+
+
+/*使用id屬性來設定元素樣式 */
+
+/*
+id不可重用，只能應用在一個元素上， 另外id 的優先級高於class 
+
+若有元素同時擁有id 和class 設置樣式有衝突時 元素會優先應用id 
+
+另外 class 在style中 是以.開頭
+
+而在style中 id 是＃開頭
+
+如下
+
+#cat-photo-element {
+  background-color: green;
+}
+
+*/
+
+
+/*調整元素內邊距*/
+/*
+
+有三個重要的屬性控制每個html元素周圍的空間 padding border margin
+padding 控制元素內容後邊框之間的空間
+
+    .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+  }
+
+*/
+
+
+
+
+
+/* 調整元素外邊距 */
+
+/*
+
+margin 控制元素邊框和周圍元素之間的距離
+
+ .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 20px; //像這樣
+  }
+
+
+
+
+*/
+
+
+
+/*為元素增加負外邊距*/
+
+/*
+
+margin 控制元素邊框和周圍元素之間的距離
+
+若把margin設為負值元素就會變大
+
+.blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: -15px; //像這樣
+  }
+*/
+
+
+
+/*
+css 允許自定義元素 使元素擁有不同的padding
+
+分別用padding-top、padding-right、padding-bottom和padding-left控制四個邊
+
+.blue-box {
+    background-color: blue;
+    color: #fff;
+    padding-top:40px;
+    padding-left:40px;
+    padding-right:20px;
+    padding-bottom:20px;
+  }
+
+*/
+
+
+/*
+css也允許元素擁有不同的margin
+
+分別為 margin-top, margin-right, margin-bottom, 和 margin-left 
+
+ .blue-box {
+    background-color: blue;
+    color: #fff;
+    margin-top:40px;
+    margin-left:40px;
+    margin-bottom:20px;
+    margin-right:20px;
+  }
+*/
+
+
+
+
+/*使用順時針方向指定元素的內邊距*/
+
+/*
+
+padding: 10px 20px 10px 20px; 上右下左
+上下這兩行是一樣的意思
+padding-top、padding-right、padding-bottom和padding-left
+
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding:40px 20px 20px 40px
+  }
+
+
+
+
+
+*/
+
+
+/*同理，使用順時針方向指定元素的外邊距*/
+
+/*
+
+margin: 10px 20px 10px 20px; 上右下左
+上下這兩行是一樣的意思
+margin-top、margin-right、margin-bottom和margin-left
+
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    margin:40px 20px 20px 40px
+  }
+
+
+
+
+
+*/
+
+
+
+/*  使用屬性選擇器設計元素樣式  */
+
+/*
+
+除了常用的id選擇器 和 class選擇器  還有其他css選取器
+
+以下範例 所有type=checkbox的元素 改變了所有具有屬性類型和對應值為radio的元素的外邊距。
+<style>
+  [type='checkbox']
+  {
+    margin:10px 0px 15px 0px;
+  }
+</style>
+
+
+ <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+
+   <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+
+*/
+
+
+
+
+
+
+/*   理解絕對單位和相對單位   */
+
+/*
+
+在前面外邊距與內邊距用的是px的長度單位,告訴瀏覽器如何調整元素大小和空間大小
+
+除了像素(px)之外還有其他長度單位 供我們使用
+
+單位長度分為兩種 相對和絕對  
+
+絕對單位長度會接近螢幕上實際測量的值 不過不同螢幕會存在解析度的差異，可能導致一些誤差
+
+像是 in mm 分別代表英吋和毫米
+
+
+相對單位長度像 em rem 他們會依賴其他長度的值 像em的大小就會基於元素字體的font-size值
+
+如果使用em設置font-size的值 他的值會跟隨父元素的font-size值改變
+
+
+＊＊＊＊＊＊有些單位長度選項是相對視窗大小來改變值的，符合rwd的設計原則
+
+
+
+
+
+ .red-box {
+    background-color: red;
+    margin: 20px 40px 20px 40px;
+    padding:1.5em //像這樣
+
+  }
+
+*/
+
+
+
+
+
+/*         繼承主體元素的樣式    */
+/*
+
+
+每個html都有一個body元素
+
+body也可以像其他元素一樣被設計樣式
+
+其他元素也會繼承body元素的樣式
+
+如下所示 雖然是設計body元素的css 但是h1也會套用這個效果 因為其他元素會繼承body元素的樣式
+
+<style>
+  body {
+    background-color: black;
+    color:green;
+    font-family:monospace;
+  }
+
+</style>
+
+<h1>Hello World</h1> 
+
+*/
+
+
+
+
+/*    樣式中的優先級   */
+
+/*
+有時候html元素的樣式會跟其他樣式發生衝突
+像h1 不能同時擁有 color:green 和 color:pink
+
+
+在下面的程式碼中 class 會覆蓋body的css樣式 會變成粉色
+
+
+所以可以知道         *******  class的優先級高於繼承樣式   ********
+
+ 
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+   
+  }
+  .pink-text{
+     color:pink;
+  }
+</style>
+<h1 class="pink-text">Hello World!</h1>
+
+
+
+*/
+
+
+/*
+html中 多個class的語法如下：
+
+class="class1 class2"
+
+html中 class 的順序不重要
+
+但在style中 class的順序是重要的
+
+後面的會蓋過前面的(就是會看最後一個宣告是什麼)
+
+從以下的範例中可以知道    最後h1會變成藍色的
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text{
+    color:blue;
+  }
+</style>
+<h1 class="pink-text blue-text">Hello World!</h1>
+
+*/
+
+
+
+
+
+
+
+
+
+/*   ID選擇器優先權高於class選擇器    */
+
+/*
+id 選擇器的語法
+
+#brown-text {
+  color: brown;
+}
+
+不用管在id宣告在pink-text 的上面或下面
+
+因為id的優先權高於class
+
+<style>
+
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+  #orange-text{
+    color:orange;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
+
+*/
+
+
+
+
+
+
+/* 用Inline覆蓋class樣式*/
+
+/*
+
+
+除了id選取器外 還有另外一種方式可以蓋過class樣式
+
+
+就是使用Inline，語法如下：
+
+<h1 style="color: green;">
+
+
+
+
+
+h1的字是白色的   因為inline的優先級大於class
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+
+<h1 style="color:white;"id="orange-text" class="pink-text blue-text">Hello World!</h1>
+
+*/
+
+
+
+
+
+
+
+
+/*             Important     的優先級最高*/
+
+/*
+
+
+當需要保證css樣式不受影響 可以使用Important關鍵字
+
+語法如下
+
+color: red !important;
+
+
+
+
+
+
+
+範例（這會確保h1是粉紅色的）
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+
+
+*/
