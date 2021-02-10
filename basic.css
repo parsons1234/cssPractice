@@ -1742,3 +1742,95 @@ img {
 
 
 */
+
+/*使用s Tag 給文本添加刪除線*/
+/*
+
+刪除線表示某段文字不再有效
+
+<h4><s>Google </s>Alphabet</h4>
+
+有了s 標籤  瀏覽器會對元素應用css text-decoration: line-through;
+
+*/
+
+
+
+/*                  使用hr標籤創造水平線   */
+
+/*
+            hr 是自關閉的標籤
+
+             <h4><s>Google</s>Alphabet</h4>
+          <hr>
+      <p><em>Google was founded by Larry Page and Sergey Brin 
+      while they were <u>Ph.D. students</u>
+      at <strong>Stanford University</strong>.</em></p>
+
+*/
+
+
+
+/*                 調整文本背景色  */
+
+/*
+        可以為想要強調的文本的元素添加背景色
+        這裡用rgba()取代rgb()
+
+
+  rgba 代表：
+  r = red 红色
+  g = green 绿色
+  b = blue 蓝色
+  a = alpha 透明度
+
+RGB 值可以在 0 到 255 之間。
+
+alpha 值可以在 0 到 1 之間，其中 0 代表完全透明，1 代表完全不透明。
+
+rgba()非常棒，因為你可以設定顏色的透明度，這意味著你可以做出一些很漂亮的半透明效果。
+
+*/
+
+
+/*                  調整標題與段落大小             */
+
+/*
+
+        標題（h1~h6）應該大於段落，除了可以更直觀看到網頁的佈局，
+
+        同時能區分出不同元素的重要程度
+
+
+
+  h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size:27px; //加了這行 把字放大而已
+  }
+
+*/
+
+
+/*             給卡片元素增加box-shadow   */
+
+/*
+
+box-shadow 是給元素增加陰影
+
+
+offset-x陰影的水平偏移量；
+offset-y陰影的垂直偏移量;
+blur-radius模糊距離；
+spread-radius陰影尺寸；
+顏色。
+
+其中blur-raduis和spread-raduis是可選的。
+
+語法如下：
+  #thumbnail{
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) ;
+  }
+
+*/
