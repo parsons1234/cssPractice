@@ -2033,4 +2033,121 @@ h6{
 
   當元素被設為相對位置 他允許指定css在normal flow 中的當前位置移動他
 
+  css 控制各個方向的偏移量相對應的屬性是 left 、 right 、 top 、bottom
+
+  他代表原來位置相對應方向偏移指定的像素 、百分比、、ems
+
+  語法如下：
+
+  p {
+  position: relative;
+  bottom: 10px;   //其實會向上移動10px
+  }
+
+而且要記得相對定位雖然偏移了 但他實際上還是在他原本的位置
+也不會對其他元素的位置造成任何影響
+
 */
+
+
+
+/*            使用css偏移移動相對定位的元素      */
+
+/*
+  top right left bottom 定義元素在相應方向的偏移距離
+
+  元素將從當前位置 相反方向偏移
+
+像是top 使h2向下移動 left 使元素向右移動
+
+
+
+
+*/
+
+
+/*                       絕對定位       */
+
+/*
+第一個特性
+
+與相對位置不一樣的地方在於 絕對定位會將元素從資料中抽掉  因此周圍的項目會忽略他
+
+絕對定位的物件會在他原本所在的位置
+
+
+當 元素設定成絕對定位 然後設left:0;top:0;時 他會往上去找父層的位置
+
+如果往上都沒有其他元素有設定 就會定在視窗上（youtube金魚影片 absolute）
+
+不是定在body上 如果要定上body上 body也要給定位（通常默認值是relative)
+
+另外fix 是永遠固定  絕對定位只固定一次 如果我定在左下 網頁又很長就會捲走
+
+
+第二個特性：
+
+如果我把元素的position設定為絕對定位 他就會往父層找有沒有fix relative absolute 
+
+如果有fix relative absolute  絕對定位的那個元素就會定在他們身上
+
+
+例如 div class c的父層是div  class b
+
+然後div  class b是設relative   div class c 設left:0; bottom:0; 
+
+那 div class c的位置就會在div class b 的left:0;bottom:0;
+
+若 class b 的父層 class A也有定位  但是class c吃到的是class b的 他就不會再往上找了
+
+反正就是會class c 往父層找有沒有定位 如果沒有就往父父層找 類推....
+
+
+絕對位置 常用在蓋板廣告那個叉叉的位置
+
+
+
+*/
+
+
+
+
+/*                                    fixed 固定定位      */
+/*
+
+定位就是在畫面中我要依據誰做對齊或者是依據誰做位置的排列
+
+使用position:fixed 定位後 他就像ps的圖層一樣自己獨立一層
+
+如果沒有設定fixed的上下左右 他會停留在原位連捲動畫面也是（永遠固定在視窗上）
+
+
+
+最常看到的就是蓋板廣告 還有導覽列 BackToTop 選單 頁尾
+
+
+關於navbar製作的部分 可以參考金魚第14天15:06左右的影片片段
+
+
+fixed 和 absolute的差別就是 fixed不會隨著畫面滾動而滾動
+
+fixed也是絕對定位的一種 也會將元素從normal flow移除
+*/
+
+
+
+
+/*            float            */
+
+/*
+
+float 不是真的使用position  而是設置元素的浮動屬性
+
+float的元素不在normal flow 中他向左或向右浮動直到邊框碰到框或另一個浮動框的邊框
+
+通常用width屬性來指定浮動元素佔據的水平空間
+
+
+
+*/
+
