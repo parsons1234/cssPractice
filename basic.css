@@ -1834,3 +1834,203 @@ spread-radius陰影尺寸；
   }
 
 */
+
+
+
+
+/*               降低元素透明度         */
+
+
+/*
+
+值1不透明
+
+值0.5半透明
+
+值0 完全透明
+
+給定的值會套用在整個元素 無論是圖片 還是 文本或背景色
+
+ .links {
+    text-align: left;
+    color: black;
+    opacity:0.7;
+
+  }
+
+
+*/
+
+
+/*    使用text-transform屬性使文本成為大寫字母     */
+
+/*
+
+
+Value	             Result
+lowercase	      "transform me"
+uppercase     	"TRANSFORM ME"
+capitalize    	"Transform Me"
+initial	        使用默认值
+inherit	        使用父元素的text-transform值。
+none	           Default:不改变文字。
+
+ h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+    text-transform:uppercase; //將文本變成大寫字母
+
+  }
+
+*/
+
+
+
+/*     font-size用於指定元素中文本的大小 */
+/*
+font-size不只有限定用於h1~h6 標籤  只要包含text 都可以使用
+
+<style>
+h1{
+    font-size:68px;
+}
+
+h2{
+    font-size:52px;
+}
+h3{
+    font-size:40px;
+}
+h4{
+    font-size:32px;
+}
+h5{
+    font-size:21px;
+}
+h6{
+    font-size:14px;
+}
+
+
+</style>
+
+
+*/
+
+
+
+
+
+/*      font-weight 設置h1~h6 Tag的粗細    */
+/*
+
+<style>
+  h1 {
+    font-size: 68px;
+    font-weight:800;
+  }
+  h2 {
+    font-size: 52px;
+    font-weight:600;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight:500;
+  }
+  h4 {
+    font-size: 32px;
+    font-weight:400;
+  }
+  h5 {
+    font-size: 21px;
+    font-weight:300;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight:200;
+  }
+</style>
+
+
+*/
+
+
+
+
+
+/*     段落的line-height     */
+/*
+
+  行高改變text中每行的高度，就是改變每行文字的垂直空間
+
+<style>
+  p {
+    font-size: 16px;
+    line-height:25px;
+  }
+</style>
+
+
+*/
+
+
+
+
+
+
+/*                  調整錨標籤的懸停狀態    */
+/*
+
+           這就是當游標滑到該標籤上 會變色
+
+<style>
+  a {
+    color: #000;
+  }
+
+    a:hover{
+    color: blue;
+  }
+
+
+</style>
+
+*/
+
+
+
+
+/*       改變元素相對位置    */
+
+/*
+
+ 先了解何謂盒模型（Box-Model）
+        
+ 盒模型的意思就是說在css中 html每個元素都可被視為一個盒子
+
+
+ block box的特性 
+ 
+ 每個box會獨立成一行，並填滿該行的空間 寬度和高度可以透過修改padding 和 margin達成
+
+  其他元素會從下一行開始（就是不能跟block box 特性的並排）
+ 
+ 像是<h1>類型的標籤 、 <div> 、 <p>
+
+
+ inline box 的特性
+ 
+ box會自動排成一列 且無法調整高度 只有寬度 padding 、margin 達成
+
+ 具備inline box特性的有 <a>、<span>、<em>、<strong> 、<img>
+
+ 元素默認這種佈局方式 稱為 normal flow（普通流）
+
+ 但是css 提供 position的方式去覆寫
+
+
+  當元素被設為相對位置 他允許指定css在normal flow 中的當前位置移動他
+
+*/
