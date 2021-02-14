@@ -2151,3 +2151,395 @@ float的元素不在normal flow 中他向左或向右浮動直到邊框碰到框
 
 */
 
+
+
+
+/*  使用z-index屬性改變重疊元素的位置   */
+
+/*
+當一些元素重疊時，在html中後出現的元素會顯示在先出現的元素前面 
+
+z-index可以指定元素出現的順序
+z-index取整數值 數值大的會比數值小的前面
+
+<style>
+  div {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .first {
+    background-color: red;      紅的在藍的前面
+    position: absolute;
+    z-index:2;
+
+  }
+  .second {
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 1;
+  }
+</style>
+
+<div class="first"></div>
+<div class="second"></div>
+
+*/
+
+
+
+
+/*                使用margin 使元素水平置中       */
+
+/*
+
+另一種位置技術是將display為block的元素水平置中
+
+常見的方式是將block元素的margin:auto;
+
+這也對圖片有用 雖然圖片默認是in-line
+
+但可以透過display:block將圖片變塊級元素
+
+語法如下：
+
+<style>
+  div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin:auto; 水平置中
+  }
+</style>
+<div></div>
+
+
+*/
+
+
+
+/*        使用hsl()調整顏色的色調     */
+
+/*
+      hsl()使css調色更方便
+
+    
+      hsl的 h 指的是hue(色相)是色彩的基本属性，就是平常所说的颜色名称，如红色、黄色等
+      
+      hsl 的s l 代表飽和度 和亮度
+
+      Saturation(飽和度)是指灰色的佔比
+
+     一個完全飽和的顏色中沒有灰色，而一個最低飽和度的顏色幾乎完全是灰色。
+
+      Lightness（亮度）是指白色和黑色的佔比
+
+      給出的百分比範圍從0%（黑色）到100%（白色），其中50%是正常顏色。
+
+
+
+
+
+*/
+
+
+
+
+/*            css線性漸變         */
+
+/*
+
+HTML背景色不限定只能用單色當背景
+
+css提供了漸變 可以透過background:linear-gradient()
+
+範例如下：
+
+background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+
+第一個參數是顏色漸層的方向 90度代表 垂直漸層 45度跟反斜線方向差不多
+
+
+*/
+
+
+
+
+
+/*       使用css線性漸變來創造條紋屬性    */
+/*
+
+
+repeating-linear-gradient 跟linear-gradient很像
+
+只是 repeating-linear-gradient 重複指定漸層
+
+下面  background:repeating-linear-gradient
+
+0px [黄色 -- 过渡 -- 蓝色] 40px [绿色 -- 过渡 -- 红色] 80px
+
+若 每隊漸變值都一樣就會變成條紋
+
+  <style>
+
+  div{ 
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      90deg,
+      yellow 0px,
+      blue 40px,
+      green 40px,
+      red 80px
+    );
+  }
+
+  </style>
+
+  <div></div>
+
+  
+
+*/
+
+
+/*          通過添加細微圖案作為背景圖像來創造紋理                    */
+
+/*
+          background屬性支持url()通過連結的方式引入指定的紋理或圖片
+
+          <style>
+            body {
+            background:url( https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+                 }
+          </style>
+
+
+*/
+
+
+
+/*                使用css Transform scale 屬性可以更改元素的大小    */
+/*
+                 transform:scale()可以用來改變元素的顯示比例
+
+                 下面的例子把段落元素放大兩倍
+
+                 p {
+                    transform:scale(2);
+                   }
+
+
+
+*/
+
+
+
+
+/*                使用css Transform scale 屬性在懸停時縮放元素  */
+/*
+
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+  div:hover{
+    transform:scale(1.1);  //當滑鼠在div上時會放大元素
+  }
+
+
+</style>
+
+<div></div>
+
+
+*/
+
+
+/*            使用css Transform skewＸ     沿著x軸傾斜元素                  */
+
+/*
+
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #top {
+    background-color: red;
+  }
+  #bottom {
+    background-color: blue;
+    transform:skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+
+
+*/
+
+
+
+/*   使用css Transform skewY     沿著Y軸傾斜元素          */
+/*
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+  }
+  #top {
+    background-color: red;
+    transform:skewY(-10deg);       //這裏
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+*/
+
+
+/*    了解css關鍵幀和動畫是如何運作的    */
+/*
+
+要給元素添加動畫 要了解animation 和@keyframes規則
+
+animation 控制動畫的外觀
+
+keyframe規則控制動畫中各階段的變化
+
+animation-name 設置動畫的名稱 也就是綁定@keyframe的名稱
+
+animation-duration 設置動畫所花費的時間
+
+
+
+
+範例如下：
+
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+animation-name:rainbow;
+animation-duration:4s;
+  }
+
+@keyframes rainbow
+{
+  0%{                       //這裡可以改成from 意思一樣
+    background-color:blue;
+  }
+  50%
+  {
+    background-color:green;
+  }
+  100%{                     //這裡可以改成to    意思一樣
+    background-color:yellow;
+  }
+}
+
+
+</style>
+<div id="rect"></div>
+
+*/
+
+
+/*              使用css動畫更改按鈕的懸停狀態                   */
+
+/*
+
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;           //記得1000ms = 1s
+  }
+  @keyframes background-color{
+      100%{
+        background-color: #4791d0;
+      }
+ 
+    }
+  
+
+</style>
+
+<button>Register</button>
+
+
+
+*/
+
+
+/*            修改動畫的填充方式        */
+/*
+
+上面的例子 會在滑鼠移動到按鈕上時變色 但500ms後會重置
+
+若要讓按鈕一直維持變色的狀態 可以使用animation-fill-mode: forwards;
+
+
+範例如下：
+
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+
+    animation-fill-mode:forwards;     //當滑鼠移動到button上時，讓button始終維持變色
+
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+</style>
+<button>Register</button>
+
+
+
+
+*/
